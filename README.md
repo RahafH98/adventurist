@@ -8,7 +8,8 @@ Ghidaa al Rowaad
 Ghoufran Daradkeh
 Rahaf Bedas
 
-- Pages:
+# Pages:
+
 (1) Home Page:
 
 Engaging interface with quick access to various app features.
