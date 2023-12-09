@@ -10,6 +10,14 @@
       "StackName": "amplify-adventurist-dev-130416",
       "StackId": "arn:aws:cloudformation:us-east-1:767824580548:stack/amplify-adventurist-dev-130416/50a8cb80-967a-11ee-8396-12a8dc9dadd5",
       "AmplifyAppId": "d1glqgvz6nqlc2"
+    },
+    "categories": {
+      "auth": {
+        "adventurist85a872e8": {}
+      },
+      "api": {
+        "adventurist": {}
+      }
     }
   }
 }
