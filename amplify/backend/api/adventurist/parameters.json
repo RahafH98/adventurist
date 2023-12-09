@@ -1,5 +1,6 @@
 {
   "AppSyncApiName": "adventurist",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2023-12-09T12:52:35.977Z"
 }

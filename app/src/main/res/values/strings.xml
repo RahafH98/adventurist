@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">adventurist</string>
+    <string name="adventurist">Adventurist</string>
+    <string name="welcome">Welcome</string>
+    <string name="please_login_with_your_information">Please login with your information</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="or_sign_up">Or Sign up</string>
+    <string name="sign_up">Sign up</string>
 </resources>
