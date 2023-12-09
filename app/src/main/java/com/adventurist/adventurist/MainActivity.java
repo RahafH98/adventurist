@@ -12,45 +12,39 @@ import android.widget.Toast;
 
 import com.amplifyframework.auth.AuthUser;
 import com.amplifyframework.auth.AuthUserAttribute;
-import com.amplifyframework.auth.AuthUserAttributeKey;
-import com.amplifyframework.auth.options.AuthSignUpOptions;
 import com.amplifyframework.core.Amplify;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
+    AuthUser authUser = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         setUpSignInAndSignOutButtons();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
-        AuthUser authUser = Amplify.Auth.getCurrentUser();
-
+        authUser = Amplify.Auth.getCurrentUser();
         String email= "";
-
-        if (authUser != null){
+        if (authUser == null){
             Button signInButton = (Button) findViewById(R.id.signInMainActivity);
-            signInButton.setVisibility(View.INVISIBLE);
-
+            signInButton.setVisibility(View.VISIBLE);
             Button signOutButton = (Button) findViewById(R.id.logOutMainActivity);
-            signOutButton.setVisibility(View.VISIBLE);
+            signOutButton.setVisibility(View.INVISIBLE);
         }else {
             email = authUser.getUsername();
             Log.i(TAG, "User Email is: " + email);
 
             Button signInButton = (Button) findViewById(R.id.signInMainActivity);
-            signInButton.setVisibility(View.VISIBLE);
+            signInButton.setVisibility(View.INVISIBLE);
 
             Button signOutButton = (Button) findViewById(R.id.logOutMainActivity);
-            signOutButton.setVisibility(View.INVISIBLE);
+            signOutButton.setVisibility(View.VISIBLE);
 
             String visibleUserEmail = email;
             Amplify.Auth.fetchUserAttributes(
@@ -75,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
     private void setUpSignInAndSignOutButtons(){
         Button signInButton = (Button) findViewById(R.id.signInMainActivity);
         signInButton.setOnClickListener(v -> {
-//            Intent goToSignInIntent = new Intent(this, signInActivity.calss);
-//            startActivity(goToSignInIntent);
+            Intent goToSignInIntent = new Intent(this, signInActivity.class);
+            startActivity(goToSignInIntent);
         });
 
         Button signOutButton = (Button) findViewById(R.id.logOutMainActivity);
@@ -86,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(() -> {
                             ((TextView)findViewById(R.id.usernameTextView)).setText("");
                         });
-//                        Intent goToSignInIntent = new Intent(this, signInActivity.calss);
-//                        startActivity(goToSignInIntent);
+                        Intent goToSignInIntent = new Intent(this, signInActivity.class);
+                        startActivity(goToSignInIntent);
                     },
                     fail -> {
                         Log.i(TAG, "Log Out failed");

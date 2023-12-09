@@ -37,9 +37,9 @@ public class VerifyAccActivity extends AppCompatActivity {
                     verificationCode,
                     success -> {
                         Log.i(TAG, "Verification Succeeded :D" + success.toString());
-//                        Intent goToSignIntent = new Intent(this, signInActivity.class);
-//                        goToSignIntent.putExtra(VERIFY_ACC_EMAIL_TAG, userEmail);
-//                        startActivity(goToSignIntent);
+                        Intent goToSignIntent = new Intent(this, signInActivity.class);
+                        goToSignIntent.putExtra(VERIFY_ACC_EMAIL_TAG, userEmail);
+                        startActivity(goToSignIntent);
                     },
                     fail -> {
                         Log.i(TAG,"Verification failed" + fail.toString());

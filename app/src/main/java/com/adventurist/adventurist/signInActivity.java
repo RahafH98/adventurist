@@ -22,9 +22,9 @@ public class signInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         Intent callingIntent = getIntent();
-//        String emailverified = callingIntent.getStringExtra(VerifyAccountActivity.VERIFY_ACCOUNT_EMAIL_TAG);
+       String emailverified = callingIntent.getStringExtra(VerifyAccActivity.VERIFY_ACC_EMAIL_TAG);
         EditText emailEditText = (EditText) findViewById(R.id.emailSignInField);
-//        emailEditText.setText(emailverified);
+       emailEditText.setText(emailverified);
         findViewById(R.id.loginBtn).setOnClickListener(v -> {
             String email = emailEditText.getText().toString();
             String password = ((EditText) findViewById(R.id.passwordSignInfield)).getText().toString();
@@ -42,8 +42,8 @@ public class signInActivity extends AppCompatActivity {
             });
         });
         findViewById(R.id.signUpBtn).setOnClickListener(v -> {
-//            Intent goToSignUpIntent = new Intent(signInActivity.this, SignUpActivity.class);
-//            startActivity(goToSignUpIntent);
+            Intent goToSignUpIntent = new Intent(signInActivity.this, SignUpActivity.class);
+           startActivity(goToSignUpIntent);
         });
     }
 
