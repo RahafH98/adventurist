@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".AdventuresAmplify"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -25,9 +26,9 @@
             </intent-filter>
         </activity>
       
-       <activity
-            android:name=".SignOutActivity"
-            android:exported="false" />
+<!--       <activity-->
+<!--            android:name=".SignOutActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".VerifyAccActivity"
             android:exported="false" />
