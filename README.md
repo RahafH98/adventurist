@@ -58,5 +58,4 @@ AWS integration for secure cloud storage and data management.
 # Technology Stack:
 Frontend: Java, Android Studio
 Backend: Java
-Database: MySQL or SQLite
 Cloud Services: AWS (Amazon Web Services)
